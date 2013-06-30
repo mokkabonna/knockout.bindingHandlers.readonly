@@ -13,11 +13,20 @@ JS
 	});
 
 
-This binding is written in AMD. Just require it to init it. It will attach itself to knockout globally. No need to require it more than once. It will also return knockout.
+This binding is written in AMD. Just require it to init it. It will return the binding object and you will have to attach it to the desired knockout binding name yourself. This is to prevent conflict with another bindings. You can for instance do this in a custom knockout module that combines knockout and your custom bindings.
 
-	define(['somefolder/readonly'], function(ko){
-		//use knockout
+	define('knockout', ['bindings/readonly', 'bindings/otherbinding',  'libs/knockout'], function(readonly, otherbinding, ko){
+		ko.bindingHandlers.readonly = readonly;
+		ko.bindingHandlers.otherbinding = otherbinding;
+		return ko;
 	});
+
+Now you can use your customized knockout in your project.
+
+	define(['knockout'], function(ko){
+		//use your custom knockout
+	});
+
 
 ## Behaviour
 
