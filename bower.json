@@ -1,0 +1,31 @@
+{
+  "name": "knockout.bindingHandlers.readonly",
+  "version": "1.0.1",
+  "main": "app/js/readonly.js",
+  "ignore": [
+    "test",
+    "node_modules",
+    "Gruntfile.js",
+    ".bowerrc",
+    ".gitignore",
+    "package.json",
+    ".editorconfig",
+    "app/vendor",
+    "components",
+    ".bowerrc"
+  ],
+  "dependencies": {
+    "knockout": "http://knockoutjs.com/downloads/knockout-2.1.0.js"
+  },
+  "devDependencies": {
+    "requirejs": "2.0.6",
+    "qunit": "~1.11.0",
+    "jquery": ">=1.6.1",
+    "bootstrap": "~2.3.2"
+  },
+  "exportsOverride": {
+    "requirejs": {
+      "js": "require.js"
+    }
+  }
+}
