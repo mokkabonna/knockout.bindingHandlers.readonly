@@ -9,24 +9,11 @@
 	});
 
 
-	require(['js/readonly'], function(ko) {
+	require(['knockout', 'js/readonly'], function(ko, readonly) {
+		ko.bindingHandlers.readonly = readonly;
 		var viewModel = {
-			numeric : ko.observable(111),
-			numericString : ko.observable('222'),
-			numericPollutedString : ko.observable('aa333aa'),
-			numericUndefined : ko.observable(),
-			numericNull : ko.observable(null),
-			extraEvents : ko.observableArray(['afterkeydown', 'input', 'blur', 'focus']),
-			selectedEvents : ko.observableArray([])
+			value: ko.observable()
 		};
-
-		viewModel.json = ko.computed(function() {
-			var model = ko.toJS(viewModel);
-			delete model.json;
-			delete model.extraEvents;
-			delete model.selectedEvents;
-			return JSON.stringify(model, null, 2);
-		});
 
 		ko.applyBindings(viewModel);
 	});
