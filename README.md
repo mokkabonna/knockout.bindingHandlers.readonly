@@ -36,7 +36,7 @@ Sets the readonly attribute if the observable is truthy.
 
 ## Demo
 
-There is a demo at http://mokkabonna.github.io/knockout.bindingsHandlers.readonly
+There is a demo at http://mokkabonna.github.io/knockout.bindingHandlers.readonly
 
 ## Dependencies
 
