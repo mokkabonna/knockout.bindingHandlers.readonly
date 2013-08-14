@@ -1,6 +1,6 @@
 # Readonly binding for knockout
 
-![Build status](https://travis-ci.org/mokkabonna/knockout.bindingHandlers.readonly.png)
+[![Build status](https://travis-ci.org/mokkabonna/knockout.bindingHandlers.readonly.png)](https://travis-ci.org/mokkabonna/knockout.bindingHandlers.readonly)
 
 ## Usage
 
