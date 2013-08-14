@@ -9,7 +9,7 @@
 	});
 
 
-	require(['../test/helper', '../test/readonly'], function(helper, number) {
+	require(['test/helper', '../test/readonly'], function(helper, number) {
 		window.__karma__.start();
 	});
 
