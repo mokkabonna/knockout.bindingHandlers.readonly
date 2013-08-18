@@ -11,12 +11,12 @@ define(['knockout', 'jquery', 'js/readonly'], function(ko, $, readonly) {
 		ok(readonly.update);
 	});
 
-	//attach it to knockout for the remainder of the test
-	ko.bindingHandlers.readonly = readonly;
 
 	module('Binding', {
 		fixture: '<input id="input1" data-bind="readonly : value" />',
 		setup: function() {
+			//attach it to knockout for the remainder of the test
+			ko.bindingHandlers.readonly = readonly;
 			model = {
 				value: ko.observable()
 			};
