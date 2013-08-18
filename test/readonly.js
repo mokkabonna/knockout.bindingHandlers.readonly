@@ -4,7 +4,7 @@ define(['knockout', 'jquery', 'js/readonly'], function(ko, $, readonly) {
 	module('General');
 
 	test('does not attach itself to knockout automatically', function() {
-		ok(!ko.bindingHandlers.number);
+		ok(!ko.bindingHandlers.readonly);
 	});
 
 	test('returns update function', function() {
