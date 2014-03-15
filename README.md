@@ -6,29 +6,25 @@
 
 HTML
 
-	<input type="text" data-bind="readonly : myObservable" >
+    <input data-bind="readonly: myobs" >
 
 JS
 
-	ko.applyBindings({
-		myObservable : ko.observable()
-	});
+    ko.applyBindings({
+        myobs : ko.observable()
+    });
 
 
-This binding is written in AMD. Just require it to init it. It will return the binding object and you will have to attach it to the desired knockout binding name yourself. This is to prevent conflict with another bindings. You can for instance do this in a custom knockout module that combines knockout and your custom bindings.
+This binding is written in AMD. It returns the binding object. It will attach itself to `knockout.bindingHandlers.readonly` once required for the first time. This can be overridden with a config section in your requirejs config like shown below.
 
-	define('knockout', ['bindings/readonly', 'bindings/otherbinding',  'libs/knockout'], function(readonly, otherbinding, ko){
-		ko.bindingHandlers.readonly = readonly;
-		ko.bindingHandlers.otherbinding = otherbinding;
-		return ko;
-	});
-
-Now you can use your customized knockout in your project.
-
-	define(['knockout'], function(ko){
-		//use your custom knockout
-	});
-
+```
+requirejs.config({
+    config: {
+        'bower_components/knockout.bindingHandlers.readonly/src/readonly': {
+            name: 'someOtherName'
+    }
+});
+```
 
 ## Behaviour
 
@@ -48,9 +44,8 @@ For accurate versions check bower.json
 
 Clone, then run (assuming you have node)
 
-    npm install
-    grunt bower //this is to install all bower packages
+    npm install & bower install
 
-You can now use grunt to run tests, lint etc.
+You can now use grunt develop for a ready made watch task for development. Tests, linting..
 
-    grunt
+    grunt develop
