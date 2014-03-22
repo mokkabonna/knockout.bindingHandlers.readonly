@@ -3,7 +3,11 @@
   "main": "src/readonly.js",
   "version": "2.0.0",
   "ignore": [
-    "**/*"
+    "node_modules",
+    "spec",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json"
   ],
   "dependencies": {
     "knockout.js": ">=2.1.0"
