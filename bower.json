@@ -1,7 +1,7 @@
 {
   "name": "knockout.bindingHandlers.readonly",
   "main": "src/readonly.js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "ignore": [
     "node_modules",
     "spec",
