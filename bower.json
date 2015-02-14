@@ -10,7 +10,7 @@
     "package.json"
   ],
   "dependencies": {
-    "knockout.js": ">=2.1.0"
+    "knockout": ">=3.1.0"
   },
   "devDependencies": {
     "requirejs": "*"
